@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for ABONTI MONDAL! 🎂</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53, #ff6b6b);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+            overflow-x: hidden;
+            transition: background 1.5s ease;
+        }
+        
+        .surprise-container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        /* Stage 1: Initial Surprise */
+        .stage-1 {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3); }
+            100% { transform: scale(1.02); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4); }
+        }
+        
+        .locked-message {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .locked-title {
+            font-size: 2.8rem;
+            color: #ff4081;
+            font-family: 'Dancing Script', cursive;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .locked-subtitle {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .lock-icon {
+            font-size: 5rem;
+            color: #ff6b6b;
+            margin: 30px 0;
+            animation: lockShake 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes lockShake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+        
+        .password-form {
+            margin-top: 30px;
+        }
+        
+        .password-input {
+            padding: 15px 25px;
+            font-size: 1.5rem;
+            border: 3px solid #ff6b6b;
+            border-radius: 50px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            margin-bottom: 20px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .password-input:focus {
+            border-color: #ff4081;
+            box-shadow: 0 0 15px rgba(255, 64, 129, 0.5);
+        }
+        
+        .hint {
+            font-size: 1rem;
+            color: #777;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        /* Stage 2: Main Surprise */
+        .stage-2 {
+            display: none;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .birthday-header {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .birthday-title {
+            font-size: 3.5rem;
+            color: #ff4081;
+            font-family: 'Great Vibes', cursive;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .birthday-icons {
+            font-size: 3rem;
+            margin: 20px 0;
+            letter-spacing: 20px;
+        }
+        
+        .name-reveal {
+            background: linear-gradient(to right, #ff6b6b, #ff8e53, #ff6b6b);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 30px auto;
+            max-width: 700px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .birthday-name {
+            font-size: 4rem;
+            color: white;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            font-family: 'Dancing Script', cursive;
+            animation: nameGlow 3s infinite alternate;
+        }
+        
+        @keyframes nameGlow {
+            0% { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); }
+            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 3px 3px 6px rgba(0, 0, 0, 0.3); }
+        }
+        
+        .message-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-left: 10px solid #ff6b6b;
+            transform: perspective(500px) rotateX(2deg);
+        }
+        
+        .personal-message {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .music-section {
+            background: rgba(255, 107, 107, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .music-title {
+            font-size: 1.8rem;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+        
+        .music-player {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.2);
+        }
+        
+        .audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .music-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .music-btn:hover {
+            background: #ff5252;
+            transform: scale(1.1);
+        }
+        
+        .gift-section {
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        .gift-box {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+            margin: 0 auto;
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+            animation: giftFloat 3s infinite alternate;
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+        }
+        
+        @keyframes giftFloat {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-20px); }
+        }
+        
+        .gift-lid {
+            width: 160px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff5252, #ff8e53);
+            position: absolute;
+            top: -20px;
+            left: -5px;
+            border-radius: 10px;
+            transition: transform 0.7s;
+        }
+        
+        .gift-box:hover .gift-lid {
+            transform: translateY(-50px) rotate(-10deg);
+        }
+        
+        .gift-ribbon {
+            position: absolute;
+            width: 20px;
+            height: 100%;
+            background: white;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .gift-ribbon:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background: white;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .gift-message {
+            display: none;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .surprise-btn {
+            background: linear-gradient(to right, #ff6b6b, #ff4081);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+        
+        .surprise-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.6);
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+            animation: confettiFall linear infinite;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        
+        @keyframes confettiFall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+        
+        .footer {
+            color: white;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .birthday-title { font-size: 2.5rem; }
+            .birthday-name { font-size: 2.8rem; }
+            .birthday-icons { font-size: 2rem; letter-spacing: 10px; }
+            .personal-message { font-size: 1.3rem; }
+            .locked-title { font-size: 2.2rem; }
+            .password-input { font-size: 1.2rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .birthday-title { font-size: 2rem; }
+            .birthday-name { font-size: 2rem; }
+            .birthday-icons { font-size: 1.5rem; letter-spacing: 5px; }
+            .personal-message { font-size: 1.1rem; }
+            .surprise-btn { padding: 15px 30px; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="surprise-container">
+        <!-- Stage 1: Locked Surprise -->
+        <div class="stage-1" id="stage1">
+            <div class="locked-message">
+                <h1 class="locked-title">A Special Surprise Awaits! 🔒</h1>
+                <p class="locked-subtitle">This message is exclusively for <strong>ABONTI MONDAL</strong></p>
+            </div>
+            
+            <div class="lock-icon" id="lockIcon">
+                <i class="fas fa-lock"></i>
+            </div>
+            
+            <p style="font-size: 1.8rem; color: #ff6b6b; margin: 20px 0;">Click the lock to reveal your surprise!</p>
+            
+            <div class="password-form" id="passwordForm" style="display: none;">
+                <input type="text" class="password-input" id="passwordInput" placeholder="Enter the secret code..." autocomplete="off">
+                <p class="hint">Hint: Try your name or "birthday"</p>
+            </div>
+            
+            <p style="margin-top: 30px; color: #666; font-size: 1.1rem;">
+                <i class="fas fa-info-circle"></i> This interactive surprise contains personalized messages, music, and gifts!
+            </p>
+        </div>
+        
+        <!-- Stage 2: Main Surprise -->
+        <div class="stage-2" id="stage2">
+            <div class="birthday-header">
+                <h1 class="birthday-title">Happy Birthday! 🎉</h1>
+                <div class="birthday-icons">
+                    <span>🎂</span>
+                    <span>💐</span>
+                    <span>🎁</span>
+                </div>
+            </div>
+            
+            <div class="name-reveal" id="nameReveal">
+                <!-- Sparkles will be added via JavaScript -->
+                <h2 class="birthday-name">ABONTI MONDAL</h2>
+            </div>
+            
+            <div class="message-box">
+                <p class="personal-message">
+                    "Dear Abonti, on this special day, I want you to know how truly amazing you are! 
+                    Your kindness, intelligence, and beautiful spirit light up every room you enter. 
+                    May this birthday be the beginning of your most wonderful year yet!"
+                </p>
+                <p style="font-size: 1.4rem; color: #ff6b6b; font-weight: 600; margin-top: 20px;">
+                    Wishing you endless joy, laughter, and beautiful memories! ✨
+                </p>
+            </div>
+            
+            <div class="music-section">
+                <h3 class="music-title">Your Birthday Song 🎵</h3>
+                <div class="music-player">
+                    <audio id="birthdaySong" loop>
+                        <!-- Using a happy birthday song URL -->
+                        <source src="https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
+                    <div class="audio-controls">
+                        <button class="music-btn" id="playBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="music-btn" id="pauseBtn">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button class="music-btn" id="volumeUp">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                    
+                    <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-music"></i> "Happy Birthday" song playing exclusively for you!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="gift-section">
+                <h3 style="color: #ff6b6b; font-size: 1.8rem; margin-bottom: 20px;">Click to Open Your Gift! 🎁</h3>
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-lid"></div>
+                    <div class="gift-ribbon"></div>
+                </div>
+                
+                <div class="gift-message" id="giftMessage">
+                    <h4 style="color: #ff6b6b; font-size: 1.8rem; margin-bottom: 15px;">Surprise! 🎉</h4>
+                    <p style="font-size: 1.3rem; line-height: 1.6; color: #444;">
+                        Your gift is a year filled with happiness, success in all your endeavors, 
+                        beautiful moments with loved ones, and dreams that come true! 
+                        Plus, you're entitled to unlimited hugs, laughter, and joy today! 🥳
+                    </p>
+                </div>
+            </div>
+            
+            <button class="surprise-btn" id="finalSurpriseBtn">
+                <i class="fas fa-magic"></i> Click for Final Surprise!
+            </button>
+        </div>
+        
+        <div class="footer">
+            <p>Made with ❤️ especially for ABONTI MONDAL's Birthday</p>
+            <p>May your day be as special as you are! ✨</p>
+        </div>
+    </div>
+    
+    <script>
+        // Stage 1: Unlocking the surprise
+        const lockIcon = document.getElementById('lockIcon');
+        const passwordForm = document.getElementById('passwordForm');
+        const passwordInput = document.getElementById('passwordInput');
+        const stage1 = document.getElementById('stage1');
+        const stage2 = document.getElementById('stage2');
+        
+        // Accepted passwords (case insensitive)
+        const acceptedPasswords = ["abonti", "abonti mondal", "abontimondal", "birthday", "happy birthday"];
+        
+        lockIcon.addEventListener('click', function() {
+            passwordForm.style.display = 'block';
+            lockIcon.innerHTML = '<i class="fas fa-unlock"></i>';
+            lockIcon.style.color = '#4CAF50';
+            lockIcon.style.animation = 'none';
+            
+            // Focus on the password input
+            setTimeout(() => {
+                passwordInput.focus();
+            }, 300);
+        });
+        
+        passwordInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                const enteredPassword = passwordInput.value.trim().toLowerCase();
+                
+                if (acceptedPasswords.includes(enteredPassword)) {
+                    // Correct password - reveal surprise
+                    unlockSurprise();
+                } else {
+                    // Wrong password - shake effect
+                    passwordInput.style.borderColor = '#ff0000';
+                    passwordInput.style.animation = 'shake 0.5s';
+                    
+                    setTimeout(() => {
+                        passwordInput.style.animation = '';
+                    }, 500);
+                    
+                    // Show hint after 3 wrong attempts
+                    if (passwordInput.getAttribute('data-attempts') === '2') {
+                        alert("Hint: Try typing your first name (lowercase)");
+                    }
+                    
+                    // Track attempts
+                    let attempts = parseInt(passwordInput.getAttribute('data-attempts') || '0');
+                    attempts++;
+                    passwordInput.setAttribute('data-attempts', attempts.toString());
+                }
+            }
+        });
+        
+        function unlockSurprise() {
+            // Create celebration effect
+            createConfetti(50);
+            
+            // Play unlock sound
+            const unlockSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3');
+            unlockSound.volume = 0.5;
+            unlockSound.play();
+            
+            // Transition to stage 2
+            stage1.style.opacity = '0';
+            stage1.style.transform = 'scale(0.8)';
+            stage1.style.transition = 'all 0.8s ease';
+            
+            setTimeout(() => {
+                stage1.style.display = 'none';
+                stage2.style.display = 'block';
+                
+                // Add sparkles to name reveal
+                addSparklesToName();
+                
+                // Auto-play birthday song after a delay
+                setTimeout(() => {
+                    document.getElementById('birthdaySong').play();
+                    document.getElementById('playBtn').innerHTML = '<i class="fas fa-pause"></i>';
+                }, 1000);
+                
+                // Animate entrance
+                stage2.style.opacity = '0';
+                stage2.style.transform = 'translateY(30px)';
+                stage2.style.display = 'block';
+                
+                setTimeout(() => {
+                    stage2.style.opacity = '1';
+                    stage2.style.transform = 'translateY(0)';
+                    stage2.style.transition = 'all 1s ease';
+                }, 50);
+            }, 800);
+        }
+        
+        // Add sparkles to name reveal
+        function addSparklesToName() {
+            const nameReveal = document.getElementById('nameReveal');
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                nameReveal.appendChild(sparkle);
+            }
+        }
+        
+        // Music player controls
+        const birthdaySong = document.getElementById('birthdaySong');
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const volumeUp = document.getElementById('volumeUp');
+        
+        playBtn.addEventListener('click', function() {
+            birthdaySong.play();
+            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        });
+        
+        pauseBtn.addEventListener('click', function() {
+            birthdaySong.pause();
+            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        });
+        
+        volumeUp.addEventListener('click', function() {
+            if (birthdaySong.volume < 1) {
+                birthdaySong.volume += 0.2;
+            }
+        });
+        
+        // Gift box interaction
+        const giftBox = document.getElementById('giftBox');
+        const giftMessage = document.getElementById('giftMessage');
+        
+        giftBox.addEventListener('click', function() {
+            giftMessage.style.display = 'block';
+            
+            // Create more confetti
+            createConfetti(30);
+            
+            // Play gift sound
+            const giftSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3');
+            giftSound.volume = 0.7;
+            giftSound.play();
+            
+            // Animate gift opening
+            const giftLid = document.querySelector('.gift-lid');
+            giftLid.style.transform = 'translateY(-50px) rotate(-10deg)';
+            
+            // Change cursor after opening
+            giftBox.style.cursor = 'default';
+        });
+        
+        // Final surprise button
+        const finalSurpriseBtn = document.getElementById('finalSurpriseBtn');
+        
+        finalSurpriseBtn.addEventListener('click', function() {
+            // Create massive confetti
+            createConfetti(200);
+            
+            // Change background color
+            document.body.style.background = 'linear-gradient(135deg, #ff4081, #7b1fa2, #ff4081)';
+            
+            // Play celebration sound
+            const celebrationSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-party-horn-sound-2927.mp3');
+            celebrationSound.volume = 0.8;
+            celebrationSound.play();
+            
+            // Show final message
+            finalSurpriseBtn.innerHTML = '<i class="fas fa-heart"></i> You are Amazing!';
+            finalSurpriseBtn.style.background = 'linear-gradient(to right, #7b1fa2, #ff4081)';
+            
+            // Create floating hearts
+            createHearts();
+            
+            // Show personalized alert
+            setTimeout(() => {
+                alert("🎂 HAPPY BIRTHDAY ABONTI MONDAL! 🎂\n\nMay your special day be filled with joy, laughter, love, and wonderful surprises! You deserve the absolute best today and always. Enjoy your celebration! 🎉🎁💐");
+            }, 1000);
+        });
+        
+        // Create confetti effect
+        function createConfetti(count) {
+            const colors = ['#ff6b6b', '#ff8e53', '#ff4081', '#4CAF50', '#2196F3', '#FFC107'];
+            
+            for (let i = 0; i < count; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 15 + 5 + 'px';
+                confetti.style.height = confetti.style.width;
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                confetti.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(confetti);
+                
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.remove();
+                    }
+                }, 7000);
+            }
+        }
+        
+        // Create floating hearts
+        function createHearts() {
+            const heartEmojis = ['❤️', '🧡', '💛', '💚', '💙', '💜', '🤎', '🖤', '🤍', '💖', '💗', '💓', '💞', '💕'];
+            
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+                heart.style.position = 'fixed';
+                heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '100vh';
+                heart.style.zIndex = '9999';
+                heart.style.opacity = '0.9';
+                heart.style.animation = `floatUp ${Math.random() * 10 + 5}s linear forwards`;
+                document.body.appendChild(heart);
+                
+                // Remove hearts after animation
+                setTimeout(() => {
+                    if (heart.parentNode) {
+                        heart.remove();
+                    }
+                }, 15000);
+            }
+            
+            // Add the floating animation
+            if (!document.getElementById('heartAnimation')) {
+                const style = document.createElement('style');
+                style.id = 'heartAnimation';
+                style.textContent = `
+                    @keyframes floatUp {
+                        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+                        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+        
+        // Create initial confetti on load
+        window.addEventListener('load', function() {
+            createConfetti(20);
+            
+            // Add shake animation for wrong password
+            if (!document.getElementById('shakeAnimation')) {
+                const style = document.createElement('style');
+                style.id = 'shakeAnimation';
+                style.textContent = `
+                    @keyframes shake {
+                        0%, 100% { transform: translateX(0); }
+                        10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+                        20%, 40%, 60%, 80% { transform: translateX(10px); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        });
+        
+        // Easter egg: Auto-unlock after 30 seconds
+        setTimeout(() => {
+            if (stage1.style.display !== 'none') {
+                alert("Don't worry, I'll help you unlock it! The password is your name 😊");
+                passwordInput.value = "abonti";
+                unlockSurprise();
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
